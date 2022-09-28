@@ -8,12 +8,16 @@ public class Contador {
         this.valor = valor;
     }
 
-    public synchronized void incrementar() {
-        valor++;
+    public void incrementar() {
+        synchronized (this) {
+            valor = valor + 1;
+        }
     }
 
-    public synchronized void decrementar() {
-        valor--;
+    public void decrementar() {
+        synchronized (this) {
+            valor = valor - 1;
+        }
     }
 
     public int getValor() {
