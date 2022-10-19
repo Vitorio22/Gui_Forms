@@ -1,18 +1,16 @@
 package org.iesfm.highschool.components;
 
+import lombok.AllArgsConstructor;
 import org.iesfm.highschool.entity.Student;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Scanner;
+@AllArgsConstructor
 public class StudentReader {
 
     private static final Logger log = LoggerFactory.getLogger(StudentReader.class);
     private Scanner scanner;
-
-    public StudentReader(Scanner scanner){
-        this.scanner = scanner;
-    }
 
     public Student readStudent(){
         log.info("Introduce el NIF: ");
